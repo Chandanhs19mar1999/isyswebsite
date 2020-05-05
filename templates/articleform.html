@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/css/styles.css">
+        <title>Teamisys</title>
+        <style>
+               input[type=submit] {
+                width: 10%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                         }
+
+                .border
+                {
+                   border-color:green;
+                   border-radius: 4px;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="/">Home</a>
+            <a class="active" href="/sendarticle">Send an Article</a>
+            <a href="/aboutisys">About Us</a>
+            <div class="topnav-right">
+                <a href="/adminlogin">Admin</a>
+            </div>
+        </div>
+        <form action="/addarticle" method="POST">
+            <fieldset>
+                <legend>Article Form</legend>
+                        {{ firstform.csrf_token }}
+                        {{ firstform.name.label}} {{ firstform.name( placeholder="John",class_="border") }}  {{ firstform.usn.label }} {{ firstform.usn(placeholder="1SI17IS008",class_="border") }}<br>
+                        <br>
+                        {{ firstform.email.label }}
+                        {{ firstform.email(class_="border",placeholder="abc@domain.com") }}<br>
+                        <br>
+                        <h4 style="color: blue;">{{ firstform.articledata.label }}</h4>
+                        {{ firstform.articledata(rows='20',cols='100',placeholder="Write Your Article Here...",class_="border") }}<br>
+                        <br>
+                        <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Teamisys</title>
+    <style>
+        input[type=submit] {
+                width: 80px;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                }
+
+                input[type=text], select {
+                        width: 180px;
+                        padding: 12px 20px;
+                        margin: 8px 0;
+                        display: inline-block;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        border-color: green;
+                        box-sizing: border-box;
+                }
+
+                input[type=password], select {
+                        width: 180px;
+                        padding: 12px 20px;
+                        margin: 8px 0;
+                        display: inline-block;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        border-color: green;
+                        box-sizing: border-box;
+                }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/sendarticle">Send an Article</a>
+        <a href="/aboutisys">About Us</a>
+        <div class="topnav-right">
+            <a class="active" href="/adminlogin">Admin</a>
+        </div>
+    </div>
+    <form  action="/logindetails" method="POST">
+        <h1 style="color: indianred;text-align: center;">View Articles Here</h1>
+        <h2>Username</h2>
+        <input  type="text" id="uname" name="uname" placeholder="username">
+         <h2>Password</h2>
+        <input type="password" id="pw" name="pw" placeholder="password"><br>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
